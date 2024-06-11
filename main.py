@@ -59,7 +59,6 @@ if __name__ == "__main__":
     claims_folder = 'claims'
     pharmacies_folder = 'pharmacies'
     reverts_folder = 'reverts'
-    data_path = "."
     data_path_file_name = "./data.tar.gz"
 
     extract_tar_gz(data_path_file_name ,name_folder)

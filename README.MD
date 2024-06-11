@@ -16,5 +16,5 @@ Ate same level of `main.py` run:
 ```
 python main.py
 ````
-Once you have ran the script, validate que the folders and files were created correctly.
+Once you have ran the script, validate that the folders and files were created correctly.
 
