@@ -5,7 +5,6 @@ import json
 from pandasql import sqldf
 
 
-
 def extract_tar_gz(file_path, file_output_path=None):
     tar = tarfile.open(file_path, 'r:gz')
     if file_output_path:
@@ -36,7 +35,6 @@ def read_files_json(file_path, folder_list)-> pd.DataFrame:
         df = json.load(open(f'{file_path}/{folder_list[0]}', 'r'))
         df = pd.DataFrame(df)
         return df
-    return df
 
 
 def read_files_csv(file_path, folder_list)-> pd.DataFrame:
@@ -109,6 +107,7 @@ if __name__ == "__main__":
             round(avg(c.price),2) as avg_price,
             row_number() over ( partition by ndc order by avg(c.price) asc ) as chain_rank
     FROM df_claim as c JOIN df_pharmacies as p ON c.npi = p.npi
+    WHERE c.npi in (select npi from df_pharmacies)
     GROUP BY  p.chain, c.ndc )
     WHERE chain_rank <=2
     """
