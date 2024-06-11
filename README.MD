@@ -3,7 +3,7 @@
 Here you will find how to run the code in order to get the output expected.
 
 ## 1 - Prepare Environment
-The firs step is to install the requirements in to your local env. At que root directory after you cloned this repo, run the command to make the instalation.
+The firs step is to install the requirements in to your local env. At the root directory after you cloned this repo, run the command to make the instalation.
 
 ```
 pip install -r requirements.txt
